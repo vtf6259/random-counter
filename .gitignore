@@ -1,0 +1,7 @@
+*.txt
+test
+bin
+obj
+# commiting multiple files more then 100MB 
+.git.old
+.git.old.old
