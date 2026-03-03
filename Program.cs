@@ -46,7 +46,7 @@ while(x < y) {
     Console.Write($"\r{x}");
     x++;
 }
-
+Console.WriteLine();
 Console.Write("Filename: ");
 string? name = Console.ReadLine();
 if(string.IsNullOrWhiteSpace(name)) {Console.WriteLine("Unable to write to a blank file"); System.Environment.Exit(1);}
