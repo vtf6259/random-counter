@@ -34,7 +34,7 @@ var y = rnd.Next(ToIntClamped(min),ToIntClamped(max));
 
 //var y = rnd.Next(567123); 
 //var y = rnd.Next(100); 
-Console.WriteLine(y);
+Console.WriteLine($"{y} Has been chosen.");
 List<String> array = new List<String>();
 string appendTmp = "";
 while(x < y) {
@@ -43,6 +43,7 @@ while(x < y) {
     }
     array.Add(appendTmp);
     appendTmp = "";
+    Console.Write($"\r{x}");
     x++;
 }
 
