@@ -59,7 +59,7 @@ jobs:
                 name,
                 body,
                 draft: false,
-                prerelease: false,
+                prerelease: true,
               });
               rel = updated.data;
             }
@@ -70,7 +70,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const release_id = parseInt(${JSON.stringify("${{ steps.ensure_release.outputs.release_id }}")});
+            const release_id = Number(core.getInput('release_id'));
             const assets = await github.rest.repos.listReleaseAssets({
               owner: context.repo.owner,
               repo: context.repo.repo,
